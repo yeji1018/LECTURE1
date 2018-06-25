@@ -1,0 +1,18 @@
+@charset "uft-8";
+
+div{
+  background-color: #92f783;
+  width: 1200px;
+  height: 1500px;
+  /* border: 10px dashed red;
+  padding: 50px; */
+  margin: 0 auto; /* auto = width를 뺀 나머지를 자동으로 마진, 0 0 0 auto이 경우 오른쪽 정렬처럼 됨 */
+  display: flex; /* flex는 가로로 나열됨. 컨텐츠들을 무조건 x축으로 나열 */
+  flex-direction: row; /* row or column */
+  /* flex-direction: column-reverse; */
+  flex-wrap: wrap;
+}
+div figure{
+  margin: 0;
+  padding: 0;
+}
