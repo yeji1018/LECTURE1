@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* .brand{
+  background-color: pink;
+  position: absolute;
+} */
+.sub{
+  background-color: #ff0;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  z-index: 2;
+}
+.quick{
+  background-color: olivedrab;
+  position: fixed;
+  z-index: 3; /*레이어 순서중 가장 위에 있는것. 숫자클수록. 제일 위에 두려면 1000 등 큰 숫자를 한번에 줘버림. */
+  top: 50px;
+  right: 50px;
+}
+div{
+  position: relative; /*relative하면 약간 뜬 상태가 됨. 여러개 하면 먼저 마크업한게 밑으로 감. */
+}
+p{
+  background-color: mediumslateblue;
+}
+.note{
+  background-color: palevioletred;
+  position: absolute;
+  width: 300px;
+  top: 0;
+  left: 0;
+}
