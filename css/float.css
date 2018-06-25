@@ -1,0 +1,25 @@
+@charset "uft-8";
+
+section{
+  background-color: teal;
+  color: #f0f0f0;
+  margin: 2em; /* 두글자만큼 */
+  padding: 1em; /* 한글자만큼 */
+  overflow: hidden; /* 그전에 미처 포함시키지 못했던 img까지 포함시킴 */
+}
+img{
+  width: 270px;
+  height: auto; /* 너비 크기에 맞게 비율대로 조정됨 */
+}
+.f-left{
+  float: left; /* 부모 요소의 왼쪽으로 */
+  margin-right: 50px; /* 오른쪽에만 마진들어가게 */
+}
+
+.f-right{
+  float: right;/* 부모 요소의 왼쪽으로 */
+  margin-left: 50px; /* 오른쪽에만 마진들어가게 */
+}
+
+/*클래스를 여러개 만든 상태에서 html에서 클래스 이름을 변경해주면 원하는 클래스대로 적용됨 */
+
