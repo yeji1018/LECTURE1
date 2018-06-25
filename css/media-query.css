@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* 모든 디바이스 */
+body{
+  background-color: tomato;
+  margin: 0;
+}
+figure{
+  margin: 0;
+  padding: 0;
+}
+
+
+/*
+.img-wrap{
+  width: 50%; /*뷰포트 기준 50퍼
+}/*부모*/
+.img-wrap img{
+  /* max-width: 100%; /* 작을 땐 상관없는데 커질땐 원본이상 커지지 말아라. */
+  width: 100%;
+  height: auto;
+}/*자식 - 부모기준 따라감*/
+
+
+
+
+/* 모바일 디바이스 - 1px부터 599px까지 */
+@media screen and (min-width:1px) and (max-width: 599px){
+  body{
+    background-color: orange;
+  }
+  .img-wrap{
+    margin: 1em;
+  }
+
+}
+
+
+/* 모바일 디바이스 - 481px부터 768px까지 */
+/*
+@media screen and (min-width: 481px) and (max-width: 768px){
+  body{
+    background-color: yellow;
+  }
+}
+*/
+
+/* 태블릿 디바이스 - 600px부터 1024px까지 */
+@media screen and (min-width: 600px) and (max-width: 1024px){
+  body{
+    background-color: green;
+  }
+
+  .wrap-container{
+    display: flex;
+    flex-wrap: wrap; /* 이걸 써야 줄바꿈이 일어남*/
+  }
+  .img-wrap{
+    width: 50%;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+}
+
+/* 데스크탑 디바이스 - 1025px이상 */
+@media screen and (min-width: 1025px){
+  body{
+    background-color: blue;
+  }
+  .wrap-container{
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+  .img-wrap{
+    width: 25%; /* 1/4이니까 4줄로 배치됨 */
+    padding: 1em;
+    box-sizing: border-box;
+  }
+}
