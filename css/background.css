@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.bg-wrap{
+  width: 500px;
+  height: 300px;
+  border: 5px solid #333;
+  /* background: transparent url("../images/cafe.jpg") 50% /200px 150px no-repeat;  */
+  /* 이미지의 right top 오른쪽 상단부분 OR 이미지의 100px 150px x,y좌표 부터 300*200 OR 배경을 작게 해서 50% /200px 150px */
+  /* background: transparent url("../images/cafe.jpg") 50% /contain no-repeat;  */
+  background-color: yellow;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../images/cafe.jpg");
+}
+
+.bg-wrap:hover{
+  background-image: url("../images/cafe.jpg");
+}
