@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* 부모 */
+.wrap{
+  background-color: mediumaquamarine;
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto; /* 가운데처럼 보이게 */
+  display: flex;
+  /* flex-direction: row; width 컨텐츠만큼 height 부모만큼, row는 어차피 디폴트값이라 안줘도 됨. */
+  /* flex-direction: column; /* width 부모만큼 height 글자만큼 */
+  justify-content: space-evenly;
+
+  /* 
+  justify-content: 메인축 정렬
+  flex-end 끝에 두는 것
+  flex-start 앞에 두는 것
+  space-around 양 옆에 간격을 주는것. -0--0--0- 이런 느낌. 
+  space-between 각각의 간격을 균등하게 주는것. 0--0--0
+  space-evenly: 맨 왼쪽, 오른쪽을 포함해서 여백을 균등하게 주는 것. --0--0--0-- 이런 느낌
+  */
+  
+  border: 10px solid blueviolet;
+}
+
+/* 자식 */
+.wrap div{
+  background-color: pink;
+  flex-basis: 100px; /* basis : width */
+  border: 1px solid tomato;
+  
+}
+
+.w1{
+  order: 1;
+
+  /* flex-shrink 디폴트 1 - 원본비율로 축소, 0이면 축소하지 말라는 뜻. */
+  flex-shrink: 1; /* 부모 1000픽셀에 요소 4개니까 나누기 4하면(1/4) 250px*/
+  flex-grow: 2; /* 쉬링크와 반대로 확대되는 것 */
+}
+
+.w2{
+  flex-shrink: 2; /* 200  */ 
+  flex-grow: 3;
+}
+
+.w3{
+  order: -1;
+  flex-shrink: 0; /* 300 */
+  flex-grow: 0;
+}
+
+.w4{
+  flex-shrink: 1; /* 250 */
+  flex-grow: 1;
+}
