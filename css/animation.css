@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+@keyframes text-ani{
+  0%{
+    font-size: 16px;
+    color: rgba(255,0,0,0);
+    top: 0px;
+    left: 0px;
+    opacity: 1; 
+  }
+  50%{
+    font-size: 90px;
+    color: rgba(250,255,255,1);
+    opacity: 0; 
+
+  }
+  100%{
+    font-size: 48px;
+    color: rgba(0,0,255,1);
+    top: 150px;
+    left: 450px;
+    opacity: 1; 
+  }
+}
+
+@keyframes img-ani{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(700px);
+  }
+}
+
+.text-wrap{
+  background: yellowgreen;
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.text{
+  background: hotpink;
+  position: absolute; /* 부모와 .. */
+  opacity: 0;
+  /* -> 밑에 한줄로 보내버림.
+  animation-name: text-ani;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: linear; /* 시작하고 끝나는 속도가 일정 
+  animation-timing-function: ease-in-out; /* 느리게 시작, 빨라졌다가 느리게 끝남 
+  animation-iteration-count: infinite; /* 1,2,3... 숫자 횟수만큼 반복 
+  animation-direction: alternate; /*왔다갔다 재생, 순방향 - 역방향 
+  animation-delay: 5s; 
+  */ 
+
+  /* animation-play-state: paused; 버튼 눌렀을 때 등의 상황에서 사용 */
+  
+  /* 한번에 선언하는 법 */
+  animation: text-ani 5s forwards ease-in-out infinite alternate 5s; 
+  /* 이름, 듀레이션, 필모드,  타이밍펑션, 이터레이션 카운트, 디렉션, (옵션 : 딜레이) - 숫자가 두개면 무조건 앞이 듀레이션*/
+}
+
+.img-wrap{
+  background: pink;
+  padding: 50px;
+
+}
+
+.kakao{
+  animation: img-ani 3000ms forwards 3 alternate;
+  /* 앞에 이름과 듀레이션 빼고는 순서 바뀌어도 됨. 겹치는 단어 없기 때문 */
+}
