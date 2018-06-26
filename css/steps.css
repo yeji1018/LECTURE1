@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@keyframes steps{
+  0%{
+    background-position: 0 0;
+
+  }
+  100%{
+    background-position: 100% 0;
+  }
+}
+
+
+.box{
+  width: 50px;
+  height: 72px;
+  margin: 50px;
+  border: 1px solid black;
+  background: url("../images/sprite-steps.png") 0 0 no-repeat; /* 0 0 시작 위치 */
+  animation: steps 1s steps(10) infinite; /* steps(10) 열번에 거쳐 끊어 보여줘라 */
+
+}
+
+@keyframes intro-text{
+  0%{
+    width: 0px;
+    opacity: 1;
+  }
+  100%{
+    width: 165px;
+  }
+}
+
+.intro-wrap{
+  box-sizing: border-box;
+  width: 585px;
+  height: 366px;
+  margin: 50px;
+  padding: 20px;
+  border: 1px solid #aaa;
+  background: url("../images/terminal.png") no-repeat 0 0;
+}
+
+.intro1, .intro2{
+  /* background: yellow; */
+  animation: intro-text 2s forwards;
+  white-space: nowrap; /* 줄바꿈 안함 */
+  overflow: hidden; /* 글자 숨겨지게 */
+  opacity: 0;
+}
+
+.intro1{
+  animation-delay: 1s;
+
+}
+
+.intro2{
+  animation-delay: 3s;
+
+}
